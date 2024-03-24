@@ -15,11 +15,11 @@ public class MecanumDriveSubSystem {
     
 
 public MecanumDriveSubSystem(CommandXboxController ctrl){
-    frontLeft = new PWMVictorSPX(0);
+    frontLeft = new PWMVictorSPX(9);
     frontRight = new PWMVictorSPX(1);
-    backLeft = new PWMVictorSPX(2);
-    backRight = new PWMVictorSPX(4);
-    drive =ctrl;
+    backLeft = new PWMVictorSPX(8);
+    backRight = new PWMVictorSPX(0);
+    drive = ctrl;
 }
 
 
