@@ -56,9 +56,11 @@ public class RobotContainer {
     // cancelling on release.
     m_driverController.b().whileTrue(m_exampleSubsystem.exampleMethodCommand());
     new Trigger(()->
+       m_driverController.getLeftX()<0||
+      m_driverController.getLeftY()<0||
       m_driverController.getLeftX()>0||
       m_driverController.getLeftY()>0||
-      m_driverController.getRightX()>0).onTrue(new Drive(m_McnDrive));
+      m_driverController.getRightX()<0).onTrue(new Drive(m_McnDrive));
   }
 
   /**
